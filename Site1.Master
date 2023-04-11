@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="FinalProject.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css --%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+     <%--datatables css --%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+     <%--fontawsome css --%>
+    <link href="fontawsome/css/all.css" rel="stylesheet" />
+
+     <%-- jquery --%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+     <%--popper js --%>
+    <script src="bootstrap/js/popper.min.js"></script>
+     <%--bootstrap js --%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <nav class = "navbar navbar-expand-lg navbar-light">
+                <a class =" navbar-brand" href="#">
+                  <img src="images/logo.png" width="150" height="150"/>
+                  Automating Process in Spare Part Business
+                </a>
+                <button class ="navbar-toggler" type="button" data-toggler="collapse" 
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expand="false" aria-label ="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+        <!-- Main Content Place holder-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Place holder-->
+
+        <footer>
+            <p>&copy All Rights Reserved. <a class="footerlinks" href="#" target="_blank"></a></p>
+        </footer>
+    </form>
+</body>
+</html>
