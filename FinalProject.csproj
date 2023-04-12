@@ -2133,13 +2133,19 @@
     <Content Include="fontawsome\svgs\solid\z.svg" />
     <Content Include="homepage.aspx" />
     <Content Include="images\accounting.png" />
+    <Content Include="images\home1.jpg" />
+    <Content Include="images\home2.jpg" />
+    <Content Include="images\homeimage.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\manufacturer.jpg" />
     <Content Include="images\order.png" />
     <Content Include="images\packing.jpg" />
+    <Content Include="images\reporting.jpg" />
     <Content Include="images\shipping.png" />
+    <Content Include="images\signup.jpg" />
     <Content Include="images\sparePart.png" />
     <Content Include="images\store.jpg" />
+    <Content Include="images\visit.jpg" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>

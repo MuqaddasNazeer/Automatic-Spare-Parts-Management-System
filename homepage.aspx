@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <section>
-       <img src="images/store.jpg" class="image-fluid"/>
+       <img src="images/home1.jpg" class="image-fluid" width="100%/9" height="500"/>
    </section>
    <section>
       <div class="container">
@@ -73,11 +73,18 @@
                   <p class="text-justify">The shipment module will maintain a record of all the shipments that have been made and their corresponding shipment numbers, container numbers, vehicle numbers, packing lists, and dates. The shipment module will also ensure that the packing lists are updated to remove some entries due to export limits, weight, and volume restrictions, as required on the day of shipment</p>
                </center>
             </div> 
+            <div class="col-md-3">
+               <center>
+                   <img width="150px" src="images/reporting.jpg" />
+                  <h4>Reporting and Listing</h4>
+                  <p class="text-justify">This module will able to generate, view, print and save all the lists and reports to be generated in system under discussion in pdf format. The Reports and Lists Management module is a critical tool for Admin to monitor the system's performance and make data-driven decisions based on the available data. These features collectively provide an end-to-end solution for spare parts management, from adding new spare parts to shipping them to customers, with tools to manage manufacturers, orders, accounts, and packing. The system also provides a comprehensive set of reports and lists that enable users to monitor performance and make data-driven decisions	</p>
+               </center>
+            </div> 
          </div>
       </div>
    </section>
    <section>
-      <img src="imgs/in-homepage-banner.jpg" class="img-fluid"/>
+      <img src="images/store.jpg" class="img-fluid" width="100%/9" height="50"/>
    </section>
    <section>
       <div class="container">
@@ -92,21 +99,21 @@
          <div class="row">
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/sign-up.png" />
+                  <img width="100px"  src="images/signup.jpg" />
                   <h4>Sign Up</h4>
-                  <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                  <p class="text-justify">Click Here to SIgn UP</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/search-online.png"/>
-                  <h4>Search Books</h4>
-                  <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                  <img width="200px" src="images/manufacturer.jpg" />
+                  <h4>Search Manufacturer </h4>
+                  <p class="text-justify">Serach manufacturer on basis of their Id's</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/library.png"/>
+                  <img width="150px" src="images/visit.jpg" />
                   <h4>Visit Us</h4>
                   <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
                </center>
