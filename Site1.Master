@@ -31,7 +31,7 @@
 
             <nav class = "navbar navbar-expand-lg navbar-light">
                 <a class =" navbar-brand" href="#">
-                  <img src="images/logo.png" width="70" height="70"/>
+                  <img src="images/logo.png" width="200" height="150"/>
                   Automating Process in Spare Part Business
                 </a>
                 <button class ="navbar-toggler" type="button" data-toggler="collapse" 
