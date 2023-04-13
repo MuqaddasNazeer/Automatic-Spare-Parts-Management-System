@@ -2164,6 +2164,7 @@
     <Content Include="PackingList.aspx" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="PurchaseList.aspx" />
+    <Content Include="Shipment.aspx" />
     <Content Include="TrustReport.aspx" />
     <Content Include="updateAccount.aspx" />
     <Content Include="UpdateCarton.aspx" />
@@ -2298,6 +2299,13 @@
     </Compile>
     <Compile Include="PurchaseList.aspx.designer.cs">
       <DependentUpon>PurchaseList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shipment.aspx.cs">
+      <DependentUpon>Shipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shipment.aspx.designer.cs">
+      <DependentUpon>Shipment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
