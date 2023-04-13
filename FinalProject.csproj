@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddCarton.aspx" />
     <Content Include="AddManufacturer.aspx" />
     <Content Include="AddOrder.aspx" />
     <Content Include="AddPayment.aspx" />
@@ -2165,11 +2166,19 @@
     <Content Include="PurchaseList.aspx" />
     <Content Include="TrustReport.aspx" />
     <Content Include="updateAccount.aspx" />
+    <Content Include="UpdateCarton.aspx" />
     <Content Include="UpdateManufacturer.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCarton.aspx.cs">
+      <DependentUpon>AddCarton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCarton.aspx.designer.cs">
+      <DependentUpon>AddCarton.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddManufacturer.aspx.cs">
       <DependentUpon>AddManufacturer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2310,6 +2319,13 @@
     </Compile>
     <Compile Include="updateAccount.aspx.designer.cs">
       <DependentUpon>updateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCarton.aspx.cs">
+      <DependentUpon>UpdateCarton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateCarton.aspx.designer.cs">
+      <DependentUpon>UpdateCarton.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateManufacturer.aspx.cs">
       <DependentUpon>UpdateManufacturer.aspx</DependentUpon>
