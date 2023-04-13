@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddManufacturer.aspx" />
+    <Content Include="AddOrder.aspx" />
     <Content Include="AddSparePart.aspx" />
     <Content Include="adminlogin.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
@@ -78,6 +79,7 @@
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
+    <Content Include="DeactivateAccount.aspx" />
     <Content Include="DeleteManufacturer.aspx" />
     <Content Include="DeleteSparePart.aspx" />
     <Content Include="fontawsome\css\all.css" />
@@ -2154,6 +2156,9 @@
     <Content Include="images\visit.jpg" />
     <Content Include="manageSpareParts.aspx" />
     <Content Include="ManufacturerAccount.aspx" />
+    <Content Include="Order_Item.aspx" />
+    <Content Include="PlaceOrder.aspx" />
+    <Content Include="updateAccount.aspx" />
     <Content Include="UpdateManufacturer.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -2165,6 +2170,13 @@
     </Compile>
     <Compile Include="AddManufacturer.aspx.designer.cs">
       <DependentUpon>AddManufacturer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrder.aspx.cs">
+      <DependentUpon>AddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddOrder.aspx.designer.cs">
+      <DependentUpon>AddOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddSparePart.aspx.cs">
       <DependentUpon>AddSparePart.aspx</DependentUpon>
@@ -2179,6 +2191,13 @@
     </Compile>
     <Compile Include="adminlogin.aspx.designer.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeactivateAccount.aspx.cs">
+      <DependentUpon>DeactivateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeactivateAccount.aspx.designer.cs">
+      <DependentUpon>DeactivateAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeleteManufacturer.aspx.cs">
       <DependentUpon>DeleteManufacturer.aspx</DependentUpon>
@@ -2215,6 +2234,20 @@
     <Compile Include="ManufacturerAccount.aspx.designer.cs">
       <DependentUpon>ManufacturerAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Order_Item.aspx.cs">
+      <DependentUpon>Order_Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order_Item.aspx.designer.cs">
+      <DependentUpon>Order_Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceOrder.aspx.cs">
+      <DependentUpon>PlaceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlaceOrder.aspx.designer.cs">
+      <DependentUpon>PlaceOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -2222,6 +2255,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="updateAccount.aspx.cs">
+      <DependentUpon>updateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updateAccount.aspx.designer.cs">
+      <DependentUpon>updateAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateManufacturer.aspx.cs">
       <DependentUpon>UpdateManufacturer.aspx</DependentUpon>
