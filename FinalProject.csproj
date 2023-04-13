@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddSparePart.aspx" />
     <Content Include="adminlogin.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="css\customstylesheet.css" />
@@ -76,6 +77,7 @@
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
+    <Content Include="DeleteSparePart.aspx" />
     <Content Include="fontawsome\css\all.css" />
     <Content Include="fontawsome\css\all.min.css" />
     <Content Include="fontawsome\css\brands.css" />
@@ -2152,12 +2154,26 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSparePart.aspx.cs">
+      <DependentUpon>AddSparePart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddSparePart.aspx.designer.cs">
+      <DependentUpon>AddSparePart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="adminlogin.aspx.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="adminlogin.aspx.designer.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteSparePart.aspx.cs">
+      <DependentUpon>DeleteSparePart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteSparePart.aspx.designer.cs">
+      <DependentUpon>DeleteSparePart.aspx</DependentUpon>
     </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>

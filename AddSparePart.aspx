@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="manageSpareParts.aspx.cs" Inherits="FinalProject.manageSpareParts" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AddSparePart.aspx.cs" Inherits="FinalProject.AddSparePart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -36,18 +35,18 @@
 
                         <div class="row">
                             <div class="col-md-4">
-                                <label>ID</label>
+                                <label>Name</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="ID"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Spare Part Name"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-8">
-                                <label>Name</label>
+                                <label>Function</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Spare Part Name"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Function"></asp:TextBox>
 
                                 </div>
                             </div>
@@ -55,15 +54,6 @@
 
                              <div class="row">
                             <div class="col-md-4">
-                                <label>Function</label>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Function"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-8">
                                 <label>Dimension</label>
                                 <div class="form-group">
                                     <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
@@ -73,43 +63,43 @@
 
                                 </div>
                             </div>
+
+                            <div class="col-md-8">
+                                <label>Radius</label>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Radius"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Radius</label>
+                                <label>Height</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Radius"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Height"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-8">
-                                <label>Height</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Height"></asp:TextBox>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
                                 <label>Weight</label>
                                 <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Weight"></asp:TextBox>
-                                    </div>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Weight"></asp:TextBox>
+
                                 </div>
                             </div>
                         </div>
+
+                        
 
 
                         <div class="row">
                             
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Update" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="ADD" />
                             </div>
                             
                         </div>
