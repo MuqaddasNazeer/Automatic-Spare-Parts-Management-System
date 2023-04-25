@@ -51,6 +51,16 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-4">
+                                <label>Rank</label>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Rank"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col">
                                 <center>
                                         <h4>Contact Details</h4>
@@ -82,7 +92,7 @@
                         <div class="row">
                             
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="ADD" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-success" runat="server" Text="ADD" OnClick="Button3_Click" />
                             </div>
                             
                         </div>

@@ -36,7 +36,7 @@ namespace FinalProject
                     {
                         Response.Write("<script>alert('Successful login');</script>");
                         Session["username"] = dr.GetValue(0).ToString();
-                        Session["fullname"] = dr.GetValue(2).ToString();
+                        Session["password"] = dr.GetValue(2).ToString();
                         Session["role"] = "admin";
                         //Session["status"] = dr.GetValue(10).ToString();
                     }
@@ -54,6 +54,9 @@ namespace FinalProject
             }
         }
 
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

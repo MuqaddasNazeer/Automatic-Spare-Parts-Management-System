@@ -92,6 +92,24 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Price</label>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Price"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <label>ManufacturerID</label>
+                                <div class="form-group">
+                                    <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="ID"></asp:TextBox>
+
+                                </div>
+                            </div>
+                            
+                        </div>
 
                         
 
@@ -99,9 +117,14 @@
                         <div class="row">
                             
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="ADD" />
+                                <asp:Button ID="Button1" class="btn btn-lg btn-block btn-success" runat="server" Text="ADD" OnClick="Button1_Click" />
                             </div>
-                            
+                            <div class="col-4">
+                                <asp:Button ID="Button2" class="btn btn-lg btn-block btn-warning" runat="server" Text="UPDATE" OnClick="Button2_Click" />
+                            </div>
+                            <div class="col-4">
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-danger" runat="server" Text="DELETE" OnClick="Button3_Click" />
+                            </div>
                         </div>
 
 
