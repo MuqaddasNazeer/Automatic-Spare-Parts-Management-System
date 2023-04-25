@@ -2165,10 +2165,13 @@
     <Content Include="PlaceOrder.aspx" />
     <Content Include="PurchaseList.aspx" />
     <Content Include="Shipment.aspx" />
+    <Content Include="SignUp.aspx" />
     <Content Include="TrustReport.aspx" />
     <Content Include="updateAccount.aspx" />
     <Content Include="UpdateCarton.aspx" />
     <Content Include="UpdateManufacturer.aspx" />
+    <Content Include="ViewManufacturer.aspx" />
+    <Content Include="ViewSpareParts.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -2307,6 +2310,13 @@
     <Compile Include="Shipment.aspx.designer.cs">
       <DependentUpon>Shipment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2341,6 +2351,20 @@
     </Compile>
     <Compile Include="UpdateManufacturer.aspx.designer.cs">
       <DependentUpon>UpdateManufacturer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewManufacturer.aspx.cs">
+      <DependentUpon>ViewManufacturer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewManufacturer.aspx.designer.cs">
+      <DependentUpon>ViewManufacturer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSpareParts.aspx.cs">
+      <DependentUpon>ViewSpareParts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSpareParts.aspx.designer.cs">
+      <DependentUpon>ViewSpareParts.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
