@@ -11,7 +11,39 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["role"]== null)
+                {
+                    LinkButton2.Visible = true; // sign up link button
 
+                    LinkButton3.Visible = false; // logout link button
+                    LinkButton7.Visible = false; // hello user link button
+
+
+                    LinkButton6.Visible = true; // admin login link button
+                    LinkButton11.Visible = false; // author management link button
+                    LinkButton12.Visible = false; // publisher management link button
+
+                }
+                else if (Session["role"].Equals("admin"))
+                {
+                    LinkButton2.Visible = false; // sign up link button
+
+                    LinkButton3.Visible = true; // logout link button
+                    LinkButton7.Visible = true; // hello user link button
+                    LinkButton7.Text = "Hello Admin";
+
+
+                    LinkButton6.Visible = false; // admin login link button
+                    LinkButton11.Visible = true; // author management link button
+                    LinkButton12.Visible = true; // publisher management link button
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         protected void LinkButton6_Click(object sender, EventArgs e)
@@ -43,6 +75,11 @@ namespace FinalProject
         {
 
             Response.Redirect("SignUp.aspx");
+        }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
