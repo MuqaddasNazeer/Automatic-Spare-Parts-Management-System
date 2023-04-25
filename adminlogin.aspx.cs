@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using FinalProject.DL;
 
 namespace FinalProject
 {
@@ -18,9 +19,9 @@ namespace FinalProject
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click1(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
@@ -35,8 +36,8 @@ namespace FinalProject
                     while (dr.Read())
                     {
                         Response.Write("<script>alert('Successful login');</script>");
-                        Session["username"] = dr.GetValue(0).ToString();
-                        Session["password"] = dr.GetValue(2).ToString();
+                        Session["UserName"] = dr.GetValue(0).ToString();
+                        Session["Password"] = dr.GetValue(2).ToString();
                         Session["role"] = "admin";
                         //Session["status"] = dr.GetValue(10).ToString();
                     }
@@ -51,11 +52,25 @@ namespace FinalProject
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
-            }
-        }
+            }*/
+            try
+            {
+                if (LoginDL.Shoplogin(strcon, TextBox1.Text.Trim(), TextBox2.Text.Trim()))
+                {
 
-        protected void Button1_Click1(object sender, EventArgs e)
-        {
+                    Response.Write("<script>alert('Successfully Login');</script>");
+                    Response.Redirect("homepage.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid, Login Fail');</script>");
+
+                }
+            }
+            catch (Exception exp)
+            {
+
+            }
 
         }
     }

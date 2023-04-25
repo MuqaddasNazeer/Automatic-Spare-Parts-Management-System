@@ -2247,6 +2247,7 @@
     <Compile Include="DeleteSparePart.aspx.designer.cs">
       <DependentUpon>DeleteSparePart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DL\LoginDL.cs" />
     <Compile Include="DL\ManufacturerDL.cs" />
     <Compile Include="GatePass.aspx.cs">
       <DependentUpon>GatePass.aspx</DependentUpon>
