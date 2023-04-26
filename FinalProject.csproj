@@ -2219,6 +2219,7 @@
       <DependentUpon>adminlogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="BL\Manufacturer.cs" />
+    <Compile Include="BL\SparePartBL.cs" />
     <Compile Include="CommertialInvoice.aspx.cs">
       <DependentUpon>CommertialInvoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2249,6 +2250,7 @@
     </Compile>
     <Compile Include="DL\LoginDL.cs" />
     <Compile Include="DL\ManufacturerDL.cs" />
+    <Compile Include="DL\SparePartDL.cs" />
     <Compile Include="GatePass.aspx.cs">
       <DependentUpon>GatePass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -56,7 +56,7 @@
                             <div class="col-md-4">
                                 <label>Dimension</label>
                                 <div class="form-group">
-                                    <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
+                                    <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                                     <asp:ListItem Text="Circular" Value="1"></asp:ListItem>
                                     <asp:ListItem Text="Flat" Value="2"></asp:ListItem>
                                     </asp:DropDownList>
@@ -94,7 +94,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Price</label>
+                                <label></label>Price
                                 <div class="form-group">
                                     <div class="input-group">
                                         <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Price"></asp:TextBox>
@@ -104,13 +104,21 @@
                             <div class="col-md-8">
                                 <label>ManufacturerID</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="ID"></asp:TextBox>
-
+                                    <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
                                 </div>
                             </div>
                             
                         </div>
-
+                        <div class="row">
+                            <div class="col-md-9">
+                                <label></label>Quantity
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Quantity"></asp:TextBox>
+                                    </div>
+                                </div>
+                            
+                        </div>
                         
 
 
