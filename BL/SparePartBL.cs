@@ -43,19 +43,19 @@ namespace FinalProject.BL
             this.ManufactureId = manufactureId;
         }
 
-        public static string AddSparePart_Circular(string con, SparePartBL SP)
+        public string AddSparePart_Circular(string con, SparePartBL SP)
         {
             string ans = "done";
             SqlConnection conn = new SqlConnection(con);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO SparePart(Name, Function ,ManufactureId, Length, Height, Width, Radius, Price) values(@Name, @Function ,@ManufactureId, @Length, @Height, @Width, @Radius, @Price)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO SparePart(Name, [Function] ,ManuacturerId, Length, Height, Width, Radius, Price) values(@Name, @function ,@ManufactureId, @Length, @Height, @Width, @Radius, @Price)", conn);
 
             cmd.Parameters.AddWithValue("@Name", SP.Name);
-            cmd.Parameters.AddWithValue("@Function", SP.function);
+            cmd.Parameters.AddWithValue("@function", SP.function);
             cmd.Parameters.AddWithValue("@ManufactureId", SP.ManufactureId);
-            cmd.Parameters.AddWithValue("@Length", null);
-            cmd.Parameters.AddWithValue("@Height", null);
-            cmd.Parameters.AddWithValue("@Width", null);
+            cmd.Parameters.AddWithValue("@Length", 0);
+            cmd.Parameters.AddWithValue("@Height", 0);
+            cmd.Parameters.AddWithValue("@Width", 0);
             cmd.Parameters.AddWithValue("@Radius", SP.radius);
             cmd.Parameters.AddWithValue("@Price", SP.price);
             cmd.ExecuteNonQuery();
@@ -63,20 +63,20 @@ namespace FinalProject.BL
             return ans;
         }
 
-        public static string AddSparePart_Flat(string con, SparePartBL SP)
+        public string AddSparePart_Flat(string con, SparePartBL SP)
         {
             string ans = "done";
             SqlConnection conn = new SqlConnection(con);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO SparePart(Name, Function ,ManufactureId, Length, Height, Width, Radius, Price) values(@Name, @Function ,@ManufactureId, @Length, @Height, @Width, @Radius, @Price)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO SparePart(Name, [Function] ,ManuacturerId, Length, Height, Width, Radius, Price) values(@Name, @function ,@ManuacturerId, @Length, @Height, @Width, @Radius, @Price)", conn);
 
             cmd.Parameters.AddWithValue("@Name", SP.Name);
-            cmd.Parameters.AddWithValue("@Function", SP.function);
-            cmd.Parameters.AddWithValue("@ManufactureId", SP.ManufactureId);
+            cmd.Parameters.AddWithValue("@function", SP.function);
+            cmd.Parameters.AddWithValue("@ManuacturerId", SP.ManufactureId);
             cmd.Parameters.AddWithValue("@Length", SP.Length);
             cmd.Parameters.AddWithValue("@Height", SP.Height);
             cmd.Parameters.AddWithValue("@Width", SP.Width);
-            cmd.Parameters.AddWithValue("@Radius", null);
+            cmd.Parameters.AddWithValue("@Radius", 0);
             cmd.Parameters.AddWithValue("@Price", SP.price);
             cmd.ExecuteNonQuery();
             conn.Close();

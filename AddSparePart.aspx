@@ -65,10 +65,10 @@
                             </div>
 
                             <div class="col-md-8">
-                                <label>Radius</label>
+                                <label>Radius\Length</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Radius"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Radius\Length"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -85,9 +85,9 @@
                             </div>
 
                             <div class="col-md-8">
-                                <label>Weight</label>
+                                <label>Width</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Weight"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Width"></asp:TextBox>
 
                                 </div>
                             </div>
@@ -104,8 +104,8 @@
                             <div class="col-md-8">
                                 <label>ManufacturerID</label>
                                 <div class="form-group">
-                                    <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
-                                </div>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="ManufactureId"></asp:TextBox>
+                               </div>
                             </div>
                             
                         </div>
