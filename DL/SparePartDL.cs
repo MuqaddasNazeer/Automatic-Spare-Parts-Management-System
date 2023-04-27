@@ -15,7 +15,7 @@ namespace FinalProject.DL
 
         public ListBox view(ListBox g)
         {
-            ListBox g;
+          //  ListBox g;
             SqlConnection cont = new SqlConnection("Data Source=DESKTOP-OLK9GL6;Initial Catalog =SparePartsManagment;Integrated Security=True");
             SqlDataReader Reader;
             SqlCommand cmd;

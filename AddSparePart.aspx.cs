@@ -18,7 +18,7 @@ namespace FinalProject
         SparePartDL s = new SparePartDL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ListBox1 = s.view(g);
+          //  ListBox1 = s.view(g);
         }
 
         protected void Button1_Click(object sender, EventArgs e)

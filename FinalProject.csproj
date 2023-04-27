@@ -2219,6 +2219,7 @@
       <DependentUpon>adminlogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="BL\Manufacturer.cs" />
+    <Compile Include="BL\PlaceOrderBL.cs" />
     <Compile Include="BL\SparePartBL.cs" />
     <Compile Include="CommertialInvoice.aspx.cs">
       <DependentUpon>CommertialInvoice.aspx</DependentUpon>

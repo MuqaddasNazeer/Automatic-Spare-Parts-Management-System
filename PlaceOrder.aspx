@@ -34,28 +34,30 @@
                         </div>
                         <div class="row">
                             <div class="col-md-8">
-                                <label>Spare Part</label>
+                                <label>Manufacturer Id</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Spare Part"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Manufacturer Id"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
                              
                         </div>
 
-                        <div class="row">                          
+                           <div class="row">
                             <div class="col-md-8">
-                                <label>Order No</label>
+                                <label>Dimension</label>
                                 <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Order No"></asp:TextBox>
-                                    </div>
+                                    <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
+                                    <asp:ListItem Text="Circular" Value="1"></asp:ListItem>
+                                    <asp:ListItem Text="Flat" Value="2"></asp:ListItem>
+                                    </asp:DropDownList>
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">                          
-                            <div class="col-md-8">
+                               </div>
+                        <div class="row">                        
+                            <div class="col-md-"6>
                                 <label>Material</label>
                                 <div class="form-group">
                                     <div class="input-group">
@@ -66,10 +68,12 @@
                         </div>
                         
 
-                        <div class="row">                            
+                        <div class="row">    
+                            
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Place" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Place" OnClick="Button3_Click" />
                             </div>
+                               
                             
                         </div>
 
