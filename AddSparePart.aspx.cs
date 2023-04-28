@@ -79,7 +79,7 @@ namespace FinalProject
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("DeleteSparePart.aspx");
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

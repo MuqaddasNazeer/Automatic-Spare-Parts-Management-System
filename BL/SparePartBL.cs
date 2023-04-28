@@ -83,6 +83,18 @@ namespace FinalProject.BL
             return ans;
         }
 
+        public string DeleteSparePart(string con, String c)
+        {
+            string ans = "done";
+            SqlConnection conn = new SqlConnection(con);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("Delete From SparePart where SparePart.Id = @Id", conn);
+            cmd.Parameters.AddWithValue("@Id", int.Parse(c));
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            return ans;
+        }
+
 
     }
 }
