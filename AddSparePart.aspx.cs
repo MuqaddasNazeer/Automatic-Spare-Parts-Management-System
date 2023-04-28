@@ -25,38 +25,50 @@ namespace FinalProject
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
+
             bool a = ifManufIDExits();
             string value = DropDownList1.Text.Trim();
             Response.Write("<script>alert('" + value + "');</script>");
 
-            if (a == true)
+            if (TextBox1.Text.Trim().Length > 1 && TextBox2.Text.Trim().Length > 1 && TextBox4.Text.Trim().Length > 1 && TextBox7.Text.Trim().Length > 1 && TextBox8.Text.Trim().Length > 1)
             {
-                Response.Write("<script>alert('value34');</script>");
-                if (value == "2")
-                {
-                    Response.Write("<script>alert('Value1.');</script>");
-                    SparePartBL sp = new SparePartBL(TextBox2.Text, TextBox1.Text, int.Parse(TextBox3.Text), int.Parse(TextBox6.Text), int.Parse(TextBox5.Text), int.Parse(TextBox4.Text), int.Parse(TextBox8.Text));
-                     c = sp.AddSparePart_Flat(strcon, sp);
-                }
-                else if (value == "1")
-                {
-                    Response.Write("<script>alert('Value3.');</script>");
-                    SparePartBL sp = new SparePartBL(TextBox2.Text, TextBox1.Text, int.Parse(TextBox3.Text), int.Parse(TextBox4.Text), int.Parse(TextBox8.Text));
-                    c = sp.AddSparePart_Circular(strcon, sp);
-                }
 
-                if (c == "done")
+                if (a == true)
                 {
-                    c = "alert(\"done\");";
-                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", c, true);
-                    Response.Write("<script>alert('Added Successfully.');</script>");
+                    Response.Write("<script>alert('value34');</script>");
+                    if (value == "2")
+                    {
+                        Response.Write("<script>alert('Value1.');</script>");
+                        SparePartBL sp = new SparePartBL(TextBox2.Text, TextBox1.Text, int.Parse(TextBox3.Text), int.Parse(TextBox6.Text), int.Parse(TextBox5.Text), int.Parse(TextBox4.Text), int.Parse(TextBox8.Text));
+                        c = sp.AddSparePart_Flat(strcon, sp);
+                    }
+                    else if (value == "1")
+                    {
+                        Response.Write("<script>alert('Value3.');</script>");
+                        SparePartBL sp = new SparePartBL(TextBox2.Text, TextBox1.Text, int.Parse(TextBox3.Text), int.Parse(TextBox4.Text), int.Parse(TextBox8.Text));
+                        c = sp.AddSparePart_Circular(strcon, sp);
+                    }
+
+                    if (c == "done")
+                    {
+                        c = "alert(\"done\");";
+                        ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", c, true);
+                        Response.Write("<script>alert('Added Successfully.');</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('NOT Added Successfully.');</script>");
+
+                    }
                 }
                 else
                 {
-                    Response.Write("<script>alert('NOT Added Successfully.');</script>");
-
+                    Response.Write("<script>alert('Wrong Input');</script>");
                 }
+            }
+            else
+            {
+                Response.Write("<script>alert('Incomplete Input');</script>");
             }
         }
 
