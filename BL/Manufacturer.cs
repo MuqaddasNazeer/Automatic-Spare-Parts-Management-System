@@ -30,7 +30,7 @@ namespace FinalProject.BL
                 SqlConnection conn = new SqlConnection(con);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO Manufacturer(Address,BusinessName,JobTitle,ContactName,Rank) values(@Address,@BusinessName,@JobTitle,@ContactName,@Rank)", conn);
-
+                                 
                 cmd.Parameters.AddWithValue("@BusinessName", m.BusinessName);
                 cmd.Parameters.AddWithValue("@Address", m.Address);
                 cmd.Parameters.AddWithValue("@JobTitle", m.JobTitle);

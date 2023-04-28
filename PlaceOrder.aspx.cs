@@ -27,20 +27,22 @@ namespace FinalProject
                 if (con.State == ConnectionState.Closed)
                 {
                     con.Open();
-
                 }
-                SqlCommand cmd = new SqlCommand("select * from Manufacture where Id='" + TextBox4.Text.Trim() + "';", con);
-                SqlDataAdapter da = new SqlDataAdapter();
+
+                SqlCommand cmd = new SqlCommand("SELECT * from Manufacturer where Id='" + TextBox4.Text.Trim() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+
                 if (dt.Rows.Count >= 1)
-                {
-                    return false;
-                }
-                else
                 {
                     return true;
                 }
+                else
+                {
+                    return false;
+                }
+
 
             }
             catch (Exception ex)
@@ -48,6 +50,7 @@ namespace FinalProject
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
                 return false;
             }
+
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -85,11 +88,6 @@ namespace FinalProject
 
 
             }
-        }
-
-        protected void Button3_Click1(object sender, EventArgs e)
-        {
-            
         }
     }
 }
