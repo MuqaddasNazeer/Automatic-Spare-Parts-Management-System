@@ -7,6 +7,7 @@ namespace FinalProject.DL
 {
     public class ManufacturerDL
     {
+
         public ManufacturerDL() 
         {
         }

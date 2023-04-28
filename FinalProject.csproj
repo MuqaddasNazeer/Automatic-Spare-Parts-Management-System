@@ -2158,6 +2158,7 @@
     <Content Include="images\sparePart.png" />
     <Content Include="images\store.jpg" />
     <Content Include="images\visit.jpg" />
+    <Content Include="MaintainStock.aspx" />
     <Content Include="manageSpareParts.aspx" />
     <Content Include="ManufacturerAccount.aspx" />
     <Content Include="Order_Item.aspx" />
@@ -2221,6 +2222,7 @@
     <Compile Include="BL\Manufacturer.cs" />
     <Compile Include="BL\PlaceOrderBL.cs" />
     <Compile Include="BL\SparePartBL.cs" />
+    <Compile Include="BL\StockBL.cs" />
     <Compile Include="CommertialInvoice.aspx.cs">
       <DependentUpon>CommertialInvoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2265,6 +2267,13 @@
     </Compile>
     <Compile Include="homepage.aspx.designer.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintainStock.aspx.cs">
+      <DependentUpon>MaintainStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintainStock.aspx.designer.cs">
+      <DependentUpon>MaintainStock.aspx</DependentUpon>
     </Compile>
     <Compile Include="manageSpareParts.aspx.cs">
       <DependentUpon>manageSpareParts.aspx</DependentUpon>
