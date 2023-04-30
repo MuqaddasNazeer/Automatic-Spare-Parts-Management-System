@@ -41,46 +41,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <label>Quantity</label>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Quantity"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                             
-                        </div>
 
-                        <div class="row">                          
-                            <div class="col-md-6">
-                                <label>Date</label>
-                                <input type="text" class="form-control datepicker" name="date" placeholder="Select Date" />
-                                <script>
-                                    $(document).ready(function () {
-                                        $('.datepicker').datepicker();
-                                    });
-                                </script>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Missing</label>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Maximum Price"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                                <label>Time</label>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Total Price"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
+                             <div class="col-md-6">
                                 <label>Product Name</label>
                                 <div class="form-group">
                                     <div class="input-group">
@@ -90,10 +52,42 @@
                                 </div>
                             </div>
                          </div>
+                          <div class="col-md-6">
+                                <label>Quantity</label>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Quantity"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>  
+                          <div class="col-md-6">
+                            <div class="form-group form-inline">
+                                <label style="margin-right: 10px;">Missing</label>
+                                <div class="input-group">
+                                    <label class="radio-inline" style="margin-right: 10px; width: 81px;"><input type="radio" name="missing" value="yes">Yes</label>
+                                    <label class="radio-inline" style="margin-left: 10px;"><input type="radio" name="missing" value="no">No</label>
+                                </div>
+                            </div>
+                          </div>
+
+                        
+                             
+
+                        <div class="col-md-6">
+                        <div class="form-group form-inline">
+                            <label style="margin-right: 10px;">Defected</label>
+                            <div class="input-group">
+                                <label class="radio-inline" style="margin-right: 10px;"><input type="radio" name="defected" value="yes">Yes</label>
+                                <label class="radio-inline" style="margin-left: 10px;"><input type="radio" name="defected" value="no">No</label>
+                            </div>
+                        </div>
+                       </div>
+
+                           
 
                         <div class="row">                            
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Add" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Add" OnClick="Button3_Click" />
                             </div>
                             
                         </div>

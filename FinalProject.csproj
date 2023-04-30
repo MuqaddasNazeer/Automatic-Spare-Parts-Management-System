@@ -2223,6 +2223,7 @@
     <Compile Include="BL\Manufacturer.cs" />
     <Compile Include="BL\PackingListBL.cs" />
     <Compile Include="BL\PlaceOrderBL.cs" />
+    <Compile Include="BL\ShipmentBL.cs" />
     <Compile Include="BL\SparePartBL.cs" />
     <Compile Include="BL\StockBL.cs" />
     <Compile Include="CommertialInvoice.aspx.cs">

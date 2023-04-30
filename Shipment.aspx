@@ -34,10 +34,10 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                <label>ShipmentNo</label>
+                                <label>ContainerNo</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Shipment"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="ContainerNO"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -53,22 +53,26 @@
 
                            <div class="row">
                             <div class="col-md-6">
-                                <label>Date</label>
-                                <input type="text" class="form-control datepicker" name="date" placeholder="Select Date" />
-                                <script>
-                                    $(document).ready(function () {
-                                        $('.datepicker').datepicker();
-                                    });
-                                </script>
+                                <label>VehicleNo</label>
+                                <div class="form-group">
+                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="VehicleNo"></asp:TextBox>
+
+                                </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Carton No</label>
+                                <label>Volume</label>
                                 <div class="form-group">
-                                    <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
-                                    <asp:ListItem Text="Weight" Value="1"></asp:ListItem>
-                                    <asp:ListItem Text="Volume" Value="2"></asp:ListItem>
-                                    </asp:DropDownList>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Volume"></asp:TextBox>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>packingLsitID</label>
+                                <div class="form-group">
+                                    <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="ID"></asp:TextBox>
 
                                 </div>
                             </div>
@@ -77,7 +81,7 @@
                         <div class="row">
                        
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Shipped" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-success" runat="server" Text="Shipped" OnClick="Button3_Click" />
                             </div>
                             
                         </div>
