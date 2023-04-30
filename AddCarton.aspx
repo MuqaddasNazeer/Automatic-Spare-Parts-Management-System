@@ -86,7 +86,7 @@
                         <div class="row">
                        
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="ADD" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="ADD" OnClick="Button3_Click" />
                             </div>
                             
                         </div>
