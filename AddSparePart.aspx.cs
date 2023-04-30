@@ -9,8 +9,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using FinalProject.DL;
 using FinalProject.BL;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
 using System.Collections.Specialized;
 using System.EnterpriseServices.CompensatingResourceManager;
+using CrystalDecisions.Web;
 
 namespace FinalProject
 {
@@ -18,6 +21,7 @@ namespace FinalProject
     {
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         string c = null;
+        //ReportDocument crystalReport = new ReportDocument();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -74,7 +78,17 @@ namespace FinalProject
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-0OSO5EO;Initial Catalog =SparePartsManagment2;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("Select * from SparePart",con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
 
+            ReportDocument crp = new ReportDocument();
+            crp.Load(Server.MapPath("SparePart.rpt"));
+            crp.SetDataSource(ds.Tables["tables"]);
+            CrystalReportViewer1.ReportSource= crp;
+            crp.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "Spare Part info");
         }
 
         protected void Button3_Click(object sender, EventArgs e)
