@@ -33,43 +33,42 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-8">
-                                <label>Packing List Id</label>
+                            <div class="col-md-4">
+                                <label>CartonNo</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Paking List Id"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="CartonNo"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div class="col-md-8">
+                                <label>Weight</label>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Weight"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
                              
                         </div>
 
                         <div class="row">                          
-                            <div class="col-md-8">
-                                <label>List Weight</label>
+                            <div class="col-md-4">
+                                <label>Quantity</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="List Weight"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Quantity"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
+                           
                             
                         </div>
-                        <div class="row">
-                        <div class="col-md-8">
-                                <label>Total Cartons</label>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Total Cartons"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                         </div>
+                       
 
                         <div class="row">                            
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Add" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Add" OnClick="Button3_Click" />
                             </div>
                             
                         </div>

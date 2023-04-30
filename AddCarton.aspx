@@ -33,52 +33,13 @@
                         </div>
 
                         <div class="row">
+                           
                             <div class="col-md-6">
-                                <label>Carton No</label>
+                                <label>Products Name</label>
                                 <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Carton No"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label>Product Name</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Quantity"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="ProductsName"></asp:TextBox>
 
                                 </div>
-                            </div>
-                        </div>
-
-                           <div class="row">
-                            <div class="col-md-6">
-                                <label>Quantity</label>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Quantity"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label>Weight</label>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Weight"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class =" row">
-                            <div class="col-md-8">
-                                <label>Date</label>
-                                <input type="text" class="form-control datepicker" name="date" placeholder="Select Date" />
-                                <script>
-                                    $(document).ready(function () {
-                                        $('.datepicker').datepicker();
-                                    });
-                                </script>
                             </div>
                         </div>
 

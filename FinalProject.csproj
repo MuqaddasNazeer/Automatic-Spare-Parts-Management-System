@@ -2221,6 +2221,7 @@
     </Compile>
     <Compile Include="BL\AddCartonBL.cs" />
     <Compile Include="BL\Manufacturer.cs" />
+    <Compile Include="BL\PackingListBL.cs" />
     <Compile Include="BL\PlaceOrderBL.cs" />
     <Compile Include="BL\SparePartBL.cs" />
     <Compile Include="BL\StockBL.cs" />
@@ -2254,6 +2255,7 @@
     </Compile>
     <Compile Include="DL\LoginDL.cs" />
     <Compile Include="DL\ManufacturerDL.cs" />
+    <Compile Include="DL\packingListDL.cs" />
     <Compile Include="DL\SparePartDL.cs" />
     <Compile Include="GatePass.aspx.cs">
       <DependentUpon>GatePass.aspx</DependentUpon>
