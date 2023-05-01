@@ -11,7 +11,7 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (Session["role"]== null)
                 {
@@ -43,7 +43,7 @@ namespace FinalProject
             catch (Exception ex)
             {
 
-            }
+            }*/
         }
 
         protected void LinkButton6_Click(object sender, EventArgs e)
@@ -53,12 +53,12 @@ namespace FinalProject
 
         protected void LinkButton11_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewSpareParts.aspx");
+            Response.Redirect("AddSparePart.aspx");
         }
 
         protected void LinkButton12_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewManufacturer.aspx");
+            Response.Redirect("AddManufacturer.aspx");
         }
 
         protected void LinkButton4_Click(object sender, EventArgs e)

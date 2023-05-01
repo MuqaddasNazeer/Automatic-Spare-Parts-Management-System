@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SparePartsManagment2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Carton">
+    <Key>
+      <PropertyRef Name="CartonNo_" />
+    </Key>
+    <Property Name="CartonNo_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProdsuctsName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PackingLists" Relationship="Self.FK_PackingList_Carton" FromRole="Carton" ToRole="PackingList" />
+  </EntityType>
+  <EntityType Name="CommercialInvoice">
+    <Key>
+      <PropertyRef Name="ShipmentId" />
+    </Key>
+    <Property Name="ShipmentId" Type="Int32" Nullable="false" />
+    <Property Name="ProductsList" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AveragePrice" Type="Int32" Nullable="false" />
+    <Property Name="Date_Time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="GatePass">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Qunatity" Type="Int32" Nullable="false" />
+    <Property Name="Missing" Type="Boolean" Nullable="false" />
+    <Property Name="Defected" Type="Boolean" Nullable="false" />
+    <Property Name="Date_Time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Ledger">
+    <Key>
+      <PropertyRef Name="AccountNo_" />
+    </Key>
+    <Property Name="AccountNo_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ManuacturerId" Type="Int32" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_Ledger" FromRole="Ledger" ToRole="Manufacturer" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BusinessName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JobTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Rank" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Ledger" Relationship="Self.FK_Ledger" FromRole="Manufacturer" ToRole="Ledger" />
+    <NavigationProperty Name="PlaceOrders" Relationship="Self.FK_PlaceOrder_Manufacturer" FromRole="Manufacturer" ToRole="PlaceOrder" />
+    <NavigationProperty Name="SpareParts" Relationship="Self.FK_SparePart_Manufacturer" FromRole="Manufacturer" ToRole="SparePart" />
+    <NavigationProperty Name="Stocks" Relationship="Self.FK_Stock_Manufacturer" FromRole="Manufacturer" ToRole="Stock" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderNo_" />
+    </Key>
+    <Property Name="OrderNo_" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OrderStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Discount" Type="Double" />
+    <Property Name="ExpectedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostedOrNot" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="PlaceOrder" Relationship="Self.FK_Order_PlaceOrder" FromRole="Order" ToRole="PlaceOrder" />
+    <NavigationProperty Name="Payments" Relationship="Self.FK_Payment_Order" FromRole="Order" ToRole="Payment" />
+  </EntityType>
+  <EntityType Name="PackingList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CartonNo" Type="Int32" Nullable="false" />
+    <Property Name="PackingDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Weight" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Carton" Relationship="Self.FK_PackingList_Carton" FromRole="PackingList" ToRole="Carton" />
+    <NavigationProperty Name="Shipments" Relationship="Self.FK_Shipment_PackingList" FromRole="PackingList" ToRole="Shipment" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountNo_" Type="Int32" Nullable="false" />
+    <Property Name="OrderNo_" Type="Int32" Nullable="false" />
+    <Property Name="PaymentType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Payment_Order" FromRole="Payment" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="PlaceOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ManufacturerId" Type="Int32" Nullable="false" />
+    <Property Name="Dimension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Material" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_PlaceOrder_Manufacturer" FromRole="PlaceOrder" ToRole="Manufacturer" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_PlaceOrder" FromRole="PlaceOrder" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Shipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContainerNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VehicleNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SealNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Volume" Type="Int32" Nullable="false" />
+    <Property Name="PackingListId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="PackingList" Relationship="Self.FK_Shipment_PackingList" FromRole="Shipment" ToRole="PackingList" />
+  </EntityType>
+  <EntityType Name="SparePart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Function" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ManuacturerId" Type="Int32" Nullable="false" />
+    <Property Name="Length" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Radius" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_SparePart_Manufacturer" FromRole="SparePart" ToRole="Manufacturer" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="SparePart_ID" />
+    </Key>
+    <Property Name="ManufacturerId" Type="Int32" Nullable="false" />
+    <Property Name="SparePart_ID" Type="Int32" Nullable="false" />
+    <Property Name="Quanity" Type="Int32" />
+    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_Stock_Manufacturer" FromRole="Stock" ToRole="Manufacturer" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TrustReport">
+    <Key>
+      <PropertyRef Name="ManufacturerId" />
+    </Key>
+    <Property Name="OrderFulfillment" Type="Boolean" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="ValueOfProducts" Type="Int32" Nullable="false" />
+    <Property Name="Percentage" Type="Double" Nullable="false" />
+    <Property Name="Post_Ship_Payment" Type="Int32" Nullable="false" />
+    <Property Name="Pre_Ship_Payment" Type="Int32" Nullable="false" />
+    <Property Name="Rank" Type="Double" Nullable="false" />
+    <Property Name="ManufacturerId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_PackingList_Carton">
+    <End Role="Carton" Type="Self.Carton" Multiplicity="1" />
+    <End Role="PackingList" Type="Self.PackingList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carton">
+        <PropertyRef Name="CartonNo_" />
+      </Principal>
+      <Dependent Role="PackingList">
+        <PropertyRef Name="CartonNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ledger">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="1" />
+    <End Role="Ledger" Type="Self.Ledger" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ledger">
+        <PropertyRef Name="AccountNo_" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlaceOrder_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="1" />
+    <End Role="PlaceOrder" Type="Self.PlaceOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PlaceOrder">
+        <PropertyRef Name="ManufacturerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SparePart_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="1" />
+    <End Role="SparePart" Type="Self.SparePart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SparePart">
+        <PropertyRef Name="ManuacturerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stock_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="1" />
+    <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="ManufacturerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_PlaceOrder">
+    <End Role="PlaceOrder" Type="Self.PlaceOrder" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PlaceOrder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderNo_" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderNo_" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="OrderNo_" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shipment_PackingList">
+    <End Role="PackingList" Type="Self.PackingList" Multiplicity="1" />
+    <End Role="Shipment" Type="Self.Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PackingList">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="PackingListId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SparePartsManagment2Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cartons" EntityType="Self.Carton" />
+    <EntitySet Name="CommercialInvoices" EntityType="Self.CommercialInvoice" />
+    <EntitySet Name="GatePasses" EntityType="Self.GatePass" />
+    <EntitySet Name="Ledgers" EntityType="Self.Ledger" />
+    <EntitySet Name="Logins" EntityType="Self.Login" />
+    <EntitySet Name="Manufacturers" EntityType="Self.Manufacturer" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="PackingLists" EntityType="Self.PackingList" />
+    <EntitySet Name="Payments" EntityType="Self.Payment" />
+    <EntitySet Name="PlaceOrders" EntityType="Self.PlaceOrder" />
+    <EntitySet Name="Shipments" EntityType="Self.Shipment" />
+    <EntitySet Name="SpareParts" EntityType="Self.SparePart" />
+    <EntitySet Name="Stocks" EntityType="Self.Stock" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TrustReports" EntityType="Self.TrustReport" />
+    <AssociationSet Name="FK_PackingList_Carton" Association="Self.FK_PackingList_Carton">
+      <End Role="Carton" EntitySet="Cartons" />
+      <End Role="PackingList" EntitySet="PackingLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ledger" Association="Self.FK_Ledger">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="Ledger" EntitySet="Ledgers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlaceOrder_Manufacturer" Association="Self.FK_PlaceOrder_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="PlaceOrder" EntitySet="PlaceOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SparePart_Manufacturer" Association="Self.FK_SparePart_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="SparePart" EntitySet="SpareParts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_Manufacturer" Association="Self.FK_Stock_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="Stock" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_PlaceOrder" Association="Self.FK_Order_PlaceOrder">
+      <End Role="PlaceOrder" EntitySet="PlaceOrders" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Order" Association="Self.FK_Payment_Order">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shipment_PackingList" Association="Self.FK_Shipment_PackingList">
+      <End Role="PackingList" EntitySet="PackingLists" />
+      <End Role="Shipment" EntitySet="Shipments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

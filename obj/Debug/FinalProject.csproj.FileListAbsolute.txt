@@ -834,3 +834,7 @@ C:\Users\a b c\OneDrive\Documents\db2021finalprojectg-38\bin\CrystalDecisions.Re
 C:\Users\a b c\OneDrive\Documents\db2021finalprojectg-38\bin\stdole.dll
 C:\Users\a b c\OneDrive\Documents\db2021finalprojectg-38\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\a b c\OneDrive\Documents\db2021finalprojectg-38\obj\Debug\FinalProject.csproj.CopyComplete
+C:\Users\a b c\OneDrive\Documents\db2021finalprojectg-38\bin\EntityFramework.dll
+C:\Users\a b c\OneDrive\Documents\db2021finalprojectg-38\bin\EntityFramework.SqlServer.dll
+C:\Users\a b c\OneDrive\Documents\db2021finalprojectg-38\bin\EntityFramework.xml
+C:\Users\a b c\OneDrive\Documents\db2021finalprojectg-38\bin\EntityFramework.SqlServer.xml
