@@ -34,14 +34,13 @@
                         </div>
                         <div class="row">
                             <div class="col-md-8">
-                                <label>Payment Id</label>
+                                <label>Order No</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Payment Id"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Order Id"></asp:TextBox>
                                     </div>
                                 </div>
-                            </div>
-                             
+                            </div>                             
                         </div>
 
                         <div class="row">                          
@@ -69,7 +68,7 @@
 
                         <div class="row">                            
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Add" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Add" OnClick="Button3_Click" />
                             </div>
                             
                         </div>
